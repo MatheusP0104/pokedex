@@ -35,6 +35,7 @@ function PokemonList() {
   p.name.toLowerCase().includes(filtro.toLowerCase())
 )
 
+
   return (
     <section>
      <label htmlFor="busca">Buscar por nome: </label>
@@ -45,6 +46,10 @@ function PokemonList() {
          onChange={(e) => setFiltro(e.target.value)}
          placeholder="Ex.: char"
        />
+       <p>Mostrando {listaFiltrada.length} Pokemon(s)</p>
+       {listaFiltrada.length  === 0 &&(
+        <p>Nenhum Pokemon encontrado para essa busca</p>
+       )}
        {listaFiltrada.map((pokemon) => (
          <PokemonCard 
            key={pokemon.id}
