@@ -58,18 +58,16 @@ body{
 /* CARD */
 .card{
   background-color: white;
+  padding: 20px;
   border-radius: 20px;
-  padding: 25px;
   text-align: center;
 
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-
-  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .card:hover{
   transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.708);
 }
 
 .card img{
@@ -88,16 +86,13 @@ body{
   color: #666;
 }
 
-.tipo{
-  display: inline-block;
-  margin-top: 10px;
 
-  background-color: #f7d02c;
-  padding: 8px 18px;
-
-  border-radius: 20px;
+  .tipo{
+  color: #ff3131;
   font-weight: bold;
+  font-size: 20px;
 }
+
 
 /* FOOTER */
 .footer{
@@ -106,4 +101,87 @@ body{
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* BLOCO DE BUSCA */
+.busca-container{
+  width: 90%;
+  max-width: 100%;
+
+  margin: 30px auto;
+  padding: 25px;
+
+  background-color: white;
+
+  border-radius: 20px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* LABEL */
+.busca-container label{
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* INPUT */
+.busca-container input{
+  width: 100%;
+
+  padding: 14px;
+
+  border: 2px solid #ddd;
+  border-radius: 12px;
+
+  font-size: 18px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.busca-container input:focus{
+  border-color: #e3350d;
+
+  box-shadow: 0 0 8px rgba(227, 53, 13, 0.3);
+}
+
+/* CONTADOR */
+.contador{
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* MENSAGEM DE ERRO */
+.erro-busca{
+  font-size: 18px;
+  font-weight: bold;
+
+  color: #d62828;
+
+  background-color: #ffe5e5;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+.pokemon-list{
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 25px;
 }
